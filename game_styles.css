@@ -84,7 +84,7 @@ body {
 }
 
 #guesses > p {
-    margin-top: 90px;
+    margin-top: 120px;
 }
 
 /* .word-input {
@@ -100,7 +100,7 @@ body {
 
 .word-input {
     width: calc(20% / 6);
-    font-size: 2vw;
+    font-size: 1.7vw;
     text-align: center;
     background-color: white;
     margin: 0 7px;
@@ -130,7 +130,7 @@ body {
 #wrong-letter-wrap {
     margin: auto;
     width: 15vw;
-    height: 25vh;
+    height: 15vh;
     background-color: #b6e3c2;
     border-radius: 10px;
     /* font-family: 'Space Mono', monospace; */
