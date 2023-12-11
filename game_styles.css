@@ -55,7 +55,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 10%;
+    gap: 6%;
 }
 
 .hangman {
@@ -84,7 +84,7 @@ body {
 }
 
 #guesses > p {
-    margin-top: 120px;
+    margin-top: 90px;
 }
 
 /* .word-input {
@@ -108,8 +108,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#guesses button {
+    display: block;
+    margin: 5px auto;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 70px;
+}
+
 #guess-input {
-    margin-top: 10px;
+    margin-top: 30px;
+    text-align: center;
+    height: 5vh;
+    width: 2.6vw;
+    font-size: 2vw;
+    border: 2px solid black;
 }
 
 #wrong-letter-wrap {
