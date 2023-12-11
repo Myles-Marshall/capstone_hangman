@@ -67,7 +67,8 @@ let hangmanSrc = [
 
 let words = [
     "script", "assign", "inputs",
-    "random"
+    "random", "append", "source",
+    "images", "string"
 ]
 
 let randomWord = words[Math.floor(((Math.random()) * (words.length)))];
