@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game_styles.css">
+    <title>Game</title>
+</head>
+<body>
+    <h1 id="welcome"></h1>
+    <div class="container">
+        <div class="game-wrap">
+            <div class="hangman">
+                <h1>HANGMAN</h1>
+                <img id="hangman-img" src="images/hangman-0.svg" alt="">
+            </div>
+
+            <div id="guesses">
+                <p>
+                    Incorrect guesses: <b><span id="incorrect">0</span> / 6</b>
+                </p>
+                
+                <div id="word-display"></div>
+
+                <input id="guess-input" type="text" placeholder="guess a letter" maxlength="1">
+                <button onclick="guessFunc()">GUESS</button>
+
+                <div id="wrong-letter-wrap">
+                    <h2>WRONG LETTERS:</h2>
+                    <p id="wrong-letter">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" id="back" onclick="goBack()">Back to Login</button>
+
+    <script src="game_scripts.js"></script>
+</body>
+</html>
