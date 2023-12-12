@@ -99,6 +99,7 @@ for (let char of word) {
   guessInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       guessFunc();
+      guessInput.value = "";
     }
   });
 
