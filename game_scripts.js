@@ -20,7 +20,6 @@ function guessFunc() {
       if (guessInput.value === word[i]) {
         document.getElementById(i).textContent = guessInput.value;
         document.getElementById(i).classList.add("correct")
-        console.log(document.querySelectorAll(".correct"))
       }
     }
 
@@ -32,20 +31,17 @@ function guessFunc() {
         wrongGuesses++;
         wrongGuessDisplay.textContent = wrongGuesses;
         hangmanImg.src = hangmanSrc[wrongGuesses];
-        // wrongLetter.textContent += " " + guessInput.value;
 
         if (wrongLetter.textContent.includes(guessInput.value.toUpperCase()) === false) {
           wrongLetters += guessInput.value + ", ";
           wrongLetter.textContent = wrongLetters.toUpperCase();
         }
-
     }
 
     if (wrongGuesses === 6) {
       setTimeout(loseReload, 100)
     }
 }
-
 
 const wordDisplay = document.getElementById("word-display");
 const guessInput = document.getElementById("guess-input");
@@ -72,7 +68,7 @@ let words = [
     "length", "margin", "border",
     "cursor", "button", "submit",
     "method", "inline", "number",
-    "concat"
+    "concat", "github"
 ]
 
 let randomWord = words[Math.floor(((Math.random()) * (words.length)))];
@@ -82,18 +78,13 @@ console.log(word);
 let index = 0;
 let wrongGuesses = 0;
 
-
-
 for (let char of word) {
-    // console.log(char)
-    // console.log(index)
     const letterDisplay = document.createElement("div");
     letterDisplay.classList.add("word-input");
     letterDisplay.id = index.toString();
     letterDisplay.textContent = "_";
     wordDisplay.appendChild(letterDisplay);
     index++;
-    // console.log(letterDisplay);
   }
   
   guessInput.addEventListener("keydown", function (event) {
@@ -102,43 +93,3 @@ for (let char of word) {
       guessInput.value = "";
     }
   });
-
-
-
-
-// for (let char of word) {
-//     // console.log(char)
-//     // console.log(index)
-//     const guessInput = document.createElement("input");
-//     guessInput.type = "text";
-//     guessInput.classList.add("word-input");
-//     guessInput.maxLength = 1;
-//     guessInput.id = index.toString();
-//     wordDisplay.appendChild(guessInput)
-//     index++;
-// }
-
-// wordDisplay.addEventListener("change", function(event) {
-//     const thisInput = event.target;
-//     const guess = thisInput.value;
-//     // console.log(guess);
-
-//     if (guess === word[thisInput.id]) {
-//         thisInput.style.backgroundColor = "green";
-//         thisInput.disabled = true;
-//         rightGuesses++;
-//     } else {
-//         if (wrongGuesses < word.length) {
-//             wrongGuesses++;
-//             wrongGuessDisplay.textContent = wrongGuesses;
-//             hangmanImg.src = hangmanSrc[wrongGuesses];
-//         }
-//     }
-    
-//     if (wrongGuesses === word.length) {
-//         wrongGuessDisplay.textContent = wrongGuesses;
-//         window.setTimeout(loseReload, 100)
-//     } else if (rightGuesses === word.length) {
-//         window.setTimeout(winReload, 100)
-//     }
-// })
