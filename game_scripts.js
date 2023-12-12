@@ -69,7 +69,9 @@ let words = [
     "script", "assign", "inputs",
     "random", "append", "source",
     "images", "string", "reload",
-    "length"
+    "length", "margin", "border",
+    "cursor", "button", "submit",
+    "method", "inline"
 ]
 
 let randomWord = words[Math.floor(((Math.random()) * (words.length)))];
