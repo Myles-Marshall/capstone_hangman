@@ -41,6 +41,8 @@ function guessFunc() {
     if (wrongGuesses === 6) {
       setTimeout(loseReload, 100)
     }
+
+    guessInput.value = "";
 }
 
 const wordDisplay = document.getElementById("word-display");
@@ -71,7 +73,7 @@ let words = [
     "concat"
 ]
 
-let randomWord = words[Math.floor(((Math.random()) * (words.length)))];
+let randomWord = words[Math.floor(Math.random() * words.length)];
 
 let word = randomWord;
 console.log(word);
@@ -90,6 +92,5 @@ for (let char of word) {
   guessInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       guessFunc();
-      guessInput.value = "";
     }
   });
