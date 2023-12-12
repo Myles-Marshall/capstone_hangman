@@ -68,7 +68,7 @@ let words = [
     "length", "margin", "border",
     "cursor", "button", "submit",
     "method", "inline", "number",
-    "concat", "github"
+    "concat"
 ]
 
 let randomWord = words[Math.floor(((Math.random()) * (words.length)))];
