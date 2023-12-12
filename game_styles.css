@@ -83,8 +83,12 @@ body {
     text-align: center;
 }
 
+#guesses h1 {
+    font-size: 1.3vw;
+}
+
 #guesses > p {
-    margin-top: 120px;
+    margin-top: 70px;
 }
 
 /* .word-input {
