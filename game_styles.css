@@ -41,7 +41,6 @@ body {
     justify-content: center;
     width: 100%;
     min-height: 80vh;
-    /* border: 1px solid black; */
 }
 
 .game-wrap {
@@ -60,24 +59,16 @@ body {
 
 .hangman {
     font-family: 'Silkscreen', sans-serif;
-    /* border: 1px solid black; */
     width: 25vw;
     height: 40vh;
     text-align: center;
-    /* background-color: red; */
-}
-
-.hangman h1 {
-    /* margin-top: 120px; */
 }
 
 .hangman img {
-    /* margin-top: 30px; */
     height: 30vh;
 }
 
 #guesses {
-    /* background-color: gray; */
     width: 40%;
     height: 100%;
     text-align: center;
@@ -90,17 +81,6 @@ body {
 #guesses > p {
     margin-top: 70px;
 }
-
-/* .word-input {
-  width: calc(60% / 6);
-  font-size: 4vw;
-  text-align: center;
-  background-color: white;
-  color: black;
-  box-shadow: inset 3px 3px 5px 1px rgba(0, 0, 0, 0.5);
-  margin: 0 0.1vw;
-  display: block;
-} */
 
 .word-input {
     width: calc(20% / 6);
@@ -137,7 +117,6 @@ body {
     height: 15vh;
     background-color: #b6e3c2;
     border-radius: 10px;
-    /* font-family: 'Space Mono', monospace; */
 }
 
 #wrong-letter-wrap h2 {
@@ -147,5 +126,4 @@ body {
 #wrong-letter {
     font-size: 1.1vw;
     color: #4c4d4c;
-    /* margin-top: 20px; */
 }
