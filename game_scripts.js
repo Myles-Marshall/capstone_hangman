@@ -74,7 +74,9 @@ let words = [
     "query", "console", "font",
     "width", "height", "padding",
     "container", "javascript", "viewport",
-    "math", "class"
+    "math", "class", "loop",
+    "value", "initialize", "canvas",
+    "array"
 ]
 
 let randomWord = words[Math.floor(Math.random() * words.length)];
