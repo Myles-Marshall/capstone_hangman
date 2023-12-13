@@ -17,8 +17,8 @@ function winReload() {
 
 function guessFunc() {
     for (let i = 0; i < word.length; i++) {
-      if (guessInput.value === word[i]) {
-        document.getElementById(i).textContent = guessInput.value;
+      if (guessInput.value.toLowerCase() === word[i]) {
+        document.getElementById(i).textContent = guessInput.value.toLowerCase();
         document.getElementById(i).classList.add("correct")
       }
     }
@@ -27,7 +27,7 @@ function guessFunc() {
         setTimeout(winReload, 100);
     }
 
-    if (word.includes(guessInput.value) === false && wrongGuesses < word.length && wrongLetter.textContent.includes(guessInput.value.toUpperCase()) === false) {
+    if (word.includes(guessInput.value.toLowerCase()) === false && wrongGuesses <= word.length && wrongLetter.textContent.includes(guessInput.value.toUpperCase()) === false) {
         wrongGuesses++;
         wrongGuessDisplay.textContent = wrongGuesses;
         hangmanImg.src = hangmanSrc[wrongGuesses];
