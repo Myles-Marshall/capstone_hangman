@@ -6,10 +6,6 @@ html {
     font-family: 'Silkscreen', sans-serif;
 }
 
-#welcome {
-    color: white;
-}
-
 body {
     display: flex;
     flex-wrap: wrap;

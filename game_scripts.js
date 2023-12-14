@@ -1,6 +1,3 @@
-const welcome = document.getElementById("welcome");
-welcome.textContent = "Hello, " + localStorage.getItem("name");
-
 function goBack() {
     window.location.href = "index.html"
 }
