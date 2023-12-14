@@ -7,7 +7,6 @@ html {
 }
 
 #welcome {
-    font-family: 'Silkscreen', sans-serif;
     color: white;
 }
 
@@ -58,7 +57,6 @@ body {
 }
 
 .hangman {
-    font-family: 'Silkscreen', sans-serif;
     width: 25vw;
     height: 40vh;
     text-align: center;
