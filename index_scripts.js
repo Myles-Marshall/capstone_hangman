@@ -24,7 +24,6 @@ function signUp() {
     if (localStorage.getItem(newUsername)) {
         alert("username already exists");
     } else {
-        localStorage.setItem("name", newUsername);
         localStorage.setItem(newUsername, newPassword)
         alert("Account created. Log in to get to the Hangman Game.")
         signUpWrap.style.display = "none";
