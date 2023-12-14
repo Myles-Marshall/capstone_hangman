@@ -3,7 +3,7 @@ function goBack() {
 }
 
 function loseReload() {
-    alert("YOU LOST!!!1! Word was: " + word.toUpperCase());
+    alert("YOU LOST!!!1!! Word was: " + word.toUpperCase());
     location.reload();
 }
 
