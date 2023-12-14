@@ -114,7 +114,7 @@ body {
 #wrong-letter-wrap {
     margin: auto;
     width: 15vw;
-    height: 15vh;
+    height: 10vh;
     background-color: #b6e3c2;
     border-radius: 10px;
 }

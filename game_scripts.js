@@ -27,7 +27,7 @@ function guessFunc() {
         setTimeout(winReload, 100);
     }
 
-    if (word.includes(guessInput.value.toLowerCase()) === false && wrongGuesses <= word.length && wrongLetter.textContent.includes(guessInput.value.toUpperCase()) === false) {
+    if (word.includes(guessInput.value.toLowerCase()) === false && wrongGuesses <= 6 && wrongLetter.textContent.includes(guessInput.value.toUpperCase()) === false) {
         wrongGuesses++;
         wrongGuessDisplay.textContent = wrongGuesses;
         hangmanImg.src = hangmanSrc[wrongGuesses];
