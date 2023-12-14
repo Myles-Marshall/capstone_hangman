@@ -8,7 +8,6 @@ html {
 
 #sign-up-wrap {
     background-color: #B5C2B7;
-    /* height: 30vh; */
     width: 25%;
     border-radius: 5px;
     margin: 30vh auto;
@@ -26,11 +25,9 @@ html {
 #log-in-wrap {
     display: none;
     background-color: #B5C2B7;
-    /* height: 30vh; */
     width: 25%;
     border-radius: 5px;
     margin: 30vh auto;
-    /* font-family: "Outfit", sans-serif; */
     font-family: 'Silkscreen', sans-serif;
     text-align: center;
     padding: 50px;
@@ -38,10 +35,8 @@ html {
 }
 
 #log-in-wrap h1 {
-    /* text-align: center; */
     font-size: 3.5vw;
     margin-top: -10px;
-    /* padding-top: 10px; */
 }
 
 form > input {
@@ -51,7 +46,6 @@ form > input {
     margin: 10px auto;
     border: none;
     border-radius: 5px;
-    /* padding: 5px; */
 }
 
 #submit-wrap {

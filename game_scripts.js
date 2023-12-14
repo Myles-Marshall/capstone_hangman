@@ -1,16 +1,22 @@
+const userDisplay = document.getElementById("user").textContent = localStorage.getItem("name");
+
 function goBack() {
-    window.location.href = "index.html"
-}
+    window.location.href = "index.html";
+};
 
 function loseReload() {
+    losses++;
+    localStorage.setItem("losses", losses);
     alert("YOU LOST!!!1!! Word was: " + word.toUpperCase());
     location.reload();
-}
+};
 
 function winReload() {
+    wins++;
+    localStorage.setItem("wins", wins)
     alert("YOU WON!!!1!");
     location.reload();
-}
+};
 
 function guessFunc() {
     for (let i = 0; i < word.length; i++) {
@@ -45,8 +51,10 @@ function guessFunc() {
 const wordDisplay = document.getElementById("word-display");
 const guessInput = document.getElementById("guess-input");
 const wrongGuessDisplay = document.getElementById("incorrect");
+const winsDisplay = document.getElementById("wins");
+const lossesDisplay = document.getElementById("losses");
 const hangmanImg = document.getElementById("hangman-img");
-const wrongLetter = document.getElementById("wrong-letter")
+const wrongLetter = document.getElementById("wrong-letter");
 
 let wrongLetters = "";
 
@@ -75,7 +83,7 @@ let words = [
     "value", "initialize", "canvas",
     "array", "float", "content",
     "style"
-]
+];
 
 let randomWord = words[Math.floor(Math.random() * words.length)];
 
@@ -83,6 +91,11 @@ let word = randomWord;
 console.log(word);
 let index = 0;
 let wrongGuesses = 0;
+let wins = localStorage.getItem("wins");
+let losses = localStorage.getItem("losses");
+winsDisplay.textContent = localStorage.getItem("wins");
+lossesDisplay.textContent = localStorage.getItem("losses");
+
 
 for (let char of word) {
     const letterDisplay = document.createElement("div");

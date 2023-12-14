@@ -13,6 +13,10 @@ body {
     justify-content: center;
 }
 
+#user {
+    color: white;
+}
+
 #back {
     background-color: white;
     border: none;

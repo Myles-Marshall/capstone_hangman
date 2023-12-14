@@ -7,6 +7,7 @@
     <title>Hangman Game</title>
 </head>
 <body>
+    <h1 id="user"></h1>
     <div class="container">
         <div class="game-wrap">
             <div class="hangman">
@@ -18,6 +19,8 @@
                 <h1>Each word has some relation to HTML, CSS, or Javascript.</h1>
 
                 <p>
+                    Wins: <b><span id="wins">0</span></b> | Losses: <b><span id="losses">0</span></b>
+                    <br>
                     Incorrect guesses: <b><span id="incorrect">0</span> / 6</b>
                 </p>
                 
@@ -29,9 +32,7 @@
 
                 <div id="wrong-letter-wrap">
                     <h2>WRONG LETTERS:</h2>
-                    <p id="wrong-letter">
-
-                    </p>
+                    <p id="wrong-letter"></p>
                 </div>
             </div>
         </div>
