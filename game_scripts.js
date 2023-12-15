@@ -8,14 +8,14 @@ function loseReload() {
     losses++;
     localStorage.setItem("losses", losses);
     alert("YOU LOST!!!1!! Word was: " + word.toUpperCase());
-    location.reload();
+    refreshWord();
 };
 
 function winReload() {
     wins++;
     localStorage.setItem("wins", wins)
     alert("YOU WON!!!1!");
-    location.reload();
+    refreshWord();
 };
 
 function guessFunc() {
@@ -27,7 +27,7 @@ function guessFunc() {
     }
 
     if (document.querySelectorAll(".correct").length === word.length) {
-      setTimeout(winReload, 100)
+      setTimeout(winReload, 200)
     }
 
     if (word.includes(guessInput.value.toLowerCase()) === false && wrongGuesses <= 6 && wrongLetter.textContent.includes(guessInput.value.toUpperCase()) === false) {
@@ -42,7 +42,7 @@ function guessFunc() {
     }
 
     if (wrongGuesses === 6) {
-      setTimeout(loseReload, 100)
+      setTimeout(loseReload, 200)
     }
 
     guessInput.value = "";
@@ -86,9 +86,9 @@ let words = [
 ];
 
 let randomWord = words[Math.floor(Math.random() * words.length)];
-
 let word = randomWord;
 console.log(word);
+
 let index = 0;
 let wrongGuesses = 0;
 let wins = localStorage.getItem("wins");
@@ -105,6 +105,26 @@ function generateWord() {
     wordDisplay.appendChild(letterDisplay);
     index++;
   }
+}
+
+function refreshWord() {
+  document.querySelectorAll(".word-input").forEach(item => {
+    item.remove();
+  })
+
+  wrongGuesses = 0;
+  index = 0;
+  wrongLetters = "";
+  wrongLetter.textContent = ""
+  wrongGuessDisplay.textContent = "0"
+  winsDisplay.textContent = localStorage.getItem("wins");
+  lossesDisplay.textContent = localStorage.getItem("losses");
+  hangmanImg.src = hangmanSrc[0];
+
+  randomWord = words[Math.floor(Math.random() * words.length)];
+  word = randomWord
+  console.log(word)
+  generateWord();
 }
   
   guessInput.addEventListener("keydown", function (event) {
