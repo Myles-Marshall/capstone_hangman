@@ -28,7 +28,7 @@ function guessFunc() {
     }
 
     if (document.querySelectorAll(".correct").length === word.length) {
-      setTimeout(winReload, 200)
+      setTimeout(winReload, 50)
     }
 
     if (word.includes(guessInput.value.toLowerCase()) === false && wrongGuesses <= 6 && wrongLetter.textContent.includes(guessInput.value.toUpperCase()) === false) {
@@ -43,7 +43,7 @@ function guessFunc() {
     }
 
     if (wrongGuesses === 6) {
-      setTimeout(loseReload, 200)
+      setTimeout(loseReload, 50)
     }
 
     guessInput.value = "";
@@ -84,7 +84,8 @@ let words = [
     "value", "initialize", "canvas",
     "array", "float", "content",
     "style", "unshift", "splice",
-    "background", "keyframes"
+    "background", "keyframes", "undefined",
+    "call"
 ];
 
 let randomWord = words[Math.floor(Math.random() * words.length)];
