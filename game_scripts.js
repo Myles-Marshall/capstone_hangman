@@ -27,7 +27,7 @@ function guessFunc() {
     }
 
     if (document.querySelectorAll(".correct").length === word.length) {
-        setTimeout(winReload, 100);
+      setTimeout(winReload, 100)
     }
 
     if (word.includes(guessInput.value.toLowerCase()) === false && wrongGuesses <= 6 && wrongLetter.textContent.includes(guessInput.value.toUpperCase()) === false) {
@@ -96,8 +96,8 @@ let losses = localStorage.getItem("losses");
 winsDisplay.textContent = localStorage.getItem("wins");
 lossesDisplay.textContent = localStorage.getItem("losses");
 
-
-for (let char of word) {
+function generateWord() {
+  for (let char of word) {
     const letterDisplay = document.createElement("div");
     letterDisplay.classList.add("word-input");
     letterDisplay.id = index.toString();
@@ -105,6 +105,7 @@ for (let char of word) {
     wordDisplay.appendChild(letterDisplay);
     index++;
   }
+}
   
   guessInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
