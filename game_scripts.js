@@ -111,7 +111,7 @@ function generateWord() {
 
 function refreshWord() {
   if (words.length > 0) {
-    ocument.querySelectorAll(".word-input").forEach(item => {
+    document.querySelectorAll(".word-input").forEach(item => {
       item.remove();
     })
   
