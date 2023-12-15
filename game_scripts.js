@@ -15,6 +15,7 @@ function winReload() {
     wins++;
     localStorage.setItem("wins", wins)
     alert("YOU WON!!!1!");
+    removeWord();
     refreshWord();
 };
 
@@ -82,7 +83,8 @@ let words = [
     "math", "class", "loop",
     "value", "initialize", "canvas",
     "array", "float", "content",
-    "style"
+    "style", "unshift", "splice",
+    "background", "keyframes"
 ];
 
 let randomWord = words[Math.floor(Math.random() * words.length)];
@@ -108,23 +110,37 @@ function generateWord() {
 }
 
 function refreshWord() {
-  document.querySelectorAll(".word-input").forEach(item => {
-    item.remove();
-  })
+  if (words.length > 0) {
+    ocument.querySelectorAll(".word-input").forEach(item => {
+      item.remove();
+    })
+  
+    wrongGuesses = 0;
+    index = 0;
+    wrongLetters = "";
+    wrongLetter.textContent = ""
+    wrongGuessDisplay.textContent = "0"
+    winsDisplay.textContent = localStorage.getItem("wins");
+    lossesDisplay.textContent = localStorage.getItem("losses");
+    hangmanImg.src = hangmanSrc[0];
+  
+    randomWord = words[Math.floor(Math.random() * words.length)];
+    word = randomWord
+    console.log(word)
+    generateWord();
+  } else {
+    alert("You guessed every word possible!")
+    location.reload();
+  }
+}
 
-  wrongGuesses = 0;
-  index = 0;
-  wrongLetters = "";
-  wrongLetter.textContent = ""
-  wrongGuessDisplay.textContent = "0"
-  winsDisplay.textContent = localStorage.getItem("wins");
-  lossesDisplay.textContent = localStorage.getItem("losses");
-  hangmanImg.src = hangmanSrc[0];
 
-  randomWord = words[Math.floor(Math.random() * words.length)];
-  word = randomWord
-  console.log(word)
-  generateWord();
+function removeWord() {
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] === word) {
+      words.splice(i, 1);
+    }
+  }
 }
   
   guessInput.addEventListener("keydown", function (event) {
